@@ -1,0 +1,30 @@
+<header>
+        <div  style="text-align:center">
+            <img src="https://filecache.mediaroom.com/mr5mr_expediabrand/177349/GLobe-large.jpg" alt="W3Schools.com" style="width:200px;height:200px;">
+           
+              <h1 >Login</h1>
+              <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+              
+               <h2> User Name: <input type="text" formControlName="userid" required></h2><br>
+               
+               <h2> Password: <input type ="password" formControlName="password" required></h2><br>
+               
+               <button (click)= "ngOnInit()"  type="button" class="btn btn-success"> Login</button>
+               <p>
+                  Value: {{ userid.value }}
+                </p>
+                <p>
+                    <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+                  </p>
+
+               <!-- <ul *ngIf= "users">
+                 <li *ngFor ="let user of users.data">
+                   <img [src]=user.avatar>
+                   <p>{{user.first_name}} {{user.last_name}}</p>
+                 </li>
+
+               </ul> --> 
+              </form>   
+               
+        </div>
+</header>
